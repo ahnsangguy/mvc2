@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<script type="text/javascript">
+	var data = {};
+	data.name = "userA";
+	data.age = 19;
+	data.aaa = 19;
+	$(document).ready(function(){
+		$.ajax({
+			url: "/json",
+			data: JSON.stringify(data),
+			type: "POST",
+			dataType: "json",
+			contentType: "application/json; charset=utf-8",
+			success: function(data){
+				console.log(data);
+			}
+		});
+	});
+</script>
+<body>
+
+</body>
+</html>
